@@ -51,13 +51,13 @@ jobs:
         uses: actions/checkout@v4
         
       - name: DeployAja Plan
-        uses: deployaja/deployaja-cli@v0.0.10
+        uses: deployaja/deployaja-cli@v0.0.15
         with:
           command: plan
           api-token: ${{ secrets.DEPLOYAJA_TOKEN }}
           
       - name: DeployAja Deploy
-        uses: deployaja/deployaja-cli@v0.0.10
+        uses: deployaja/deployaja-cli@v0.0.15
         with:
           command: deploy
           api-token: ${{ secrets.DEPLOYAJA_TOKEN }}
@@ -67,7 +67,7 @@ jobs:
           docker-password: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           
       - name: DeployAja Status
-        uses: deployaja/deployaja-cli@v0.0.10
+        uses: deployaja/deployaja-cli@v0.0.15
         with:
           command: status
           api-token: ${{ secrets.DEPLOYAJA_TOKEN }}
